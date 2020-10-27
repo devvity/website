@@ -61,6 +61,7 @@
             {
               var result = JSON.parse(noobb.responseText)
               for( let prop in result ){
+                Console.log(result[prop])
                 let xxhr = new XMLHttpRequest();
                 var url = "https://discord.com/api/v8/channels/"+document.getElementById("inputServer").value + "/messages/" + +result[prop].id ;
                 xxhr.open("DELETE", url, true);
