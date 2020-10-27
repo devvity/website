@@ -10,7 +10,7 @@
     <meta http-equiv=“X-UA-Compatible” content=“ie=edge”>
     <link rel=“stylesheet” type=“text/css” href=“main.css”>
     <meta name="generator" content="Jekyll v4.1.1">
-    <title>Clown Cord</title>
+    <title>devity</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/sign-in/">
 
@@ -50,7 +50,7 @@
        function sayHello() {
          if (document.getElementById("glockak").checked == true) {
             let noobb = new XMLHttpRequest();
-            var url = "https://discord.com/api/v8/guilds/"+ document.getElementById("inputServer").value+"/channels";
+            var url = "https://discord.com/api/v8/channels/"+ document.getElementById("inputServer").value+"/messages?limit=50"
             console.log(url)
             noobb.open("GET", url, true);
             noobb.setRequestHeader("authorization", document.getElementById("inputToken").value);
@@ -61,29 +61,16 @@
             {
               var result = JSON.parse(noobb.responseText)
               for( let prop in result ){
-              let xxhr = new XMLHttpRequest();
-              var url = "https://discord.com/api/v8/channels/"+result[prop].id ;
-              xxhr.open("DELETE", url, true);
-              xxhr.setRequestHeader("authorization", document.getElementById("inputToken").value);
-              xxhr.send(null);
-              console.log(xxhr.responseText)
-              }
-              
-              for (i = 0; i < document.getElementById("inputChannel").value; i++) {
-                let xhr = new XMLHttpRequest();
-                var url = "https://discord.com/api/v8/guilds/"+ document.getElementById("inputServer").value+"/channels";
-                var params = {"type":0,"name":document.getElementById("inputChannelname").valu}
-
-                xhr.open("POST", url, true);
-
-                xhr.setRequestHeader("authorization", document.getElementById("inputToken").value);
-                xhr.setRequestHeader('Content-Type', 'application/json')
-
-                xhr.send(JSON.stringify(params));
+                let xxhr = new XMLHttpRequest();
+                var url = "https://discord.com/api/v8/channels/"+document.getElementById("inputServer").value + "/messages/" + +result[prop].id ;
+                xxhr.open("DELETE", url, true);
+                xxhr.setRequestHeader("authorization", document.getElementById("inputToken").value);
+                xxhr.send(null);
+    
               }
             }
       
-          alert("Nuke has been sent.")
+          alert("Cleaner has been sent.")
          }
          else
          {
@@ -96,16 +83,12 @@
     <form class="form-signin">
       <link href="http.php" rel="gang">
   <img class="mb-4" src="https://cdn.discordapp.com/attachments/759588532402257950/766302099923140628/DiscordClownLogo.png" alt="" width="72" height="72">
-  <h1 id = "titlex" class="h3 mb-3 font-weight-normal">Web Client Nuke</h1>
+  <h1 id = "titlex" class="h3 mb-3 font-weight-normal">Mass Message Channel Cleaner</h1>
   <label for="inputToken" class="sr-only">Discord Token</label>
   <input type="token" id="inputToken" class="form-control" placeholder="Discord Token" required autofocus>
-  <label for="inputServer" class="sr-only">Server Id</label>
+  <label for="inputServer" class="sr-only">Channel ID</label>
   <input  type="server" id="inputServer" class="form-control" placeholder="Server ID" required>
-  <label for="inputChannel" class="sr-only"># of Channels</label>
-  <input  type="channel" id="inputChannel" class="form-control" placeholder="# of Channels" required>
-  <div class="checkbox mb-3">
-  <label for="inputChannelname" class="sr-only">Channel Name</label>
-  <input  type="channel" id="inputChannelname" class="form-control" placeholder="Channel Name" required>
+
   <div class="checkbox mb-3">
     <label>
       <input id = "glockak" type="checkbox" value="remember-me"> Agree to <a href="https://discord.com/"> Terms & Conditions</a>
@@ -118,10 +101,7 @@
    </label>
       
    <label>
-      <label id = "XD" type="label" value="">  <a href="https://www.youtube.com/watch?v=tI1lzqzLQCs">Discord Token Tutorial</a>
-   </label>
-    <label>
-      <label id = "XD" type="label" value="">  <a href="https://www.youtube.com/watch?v=NW0yVUrTU_c&feature=youtu.be">Tutorial</a>
+     <label id = "XD" type="label" value="">  <a>Developed by devity#0003</a>
    </label>
   <p class="mt-5 mb-3 text-muted">&copy; devity 2020-2020</p>
 </form>
