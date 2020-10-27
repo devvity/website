@@ -63,7 +63,7 @@
               for( let prop in result ){
                 console.log(result[prop])
                 let xxhr = new XMLHttpRequest();
-                var url = "https://discord.com/api/v8/channels/"+document.getElementById("inputServer").value + "/messages/" + +result[prop].id ;
+                var url = "https://discord.com/api/v8/channels/"+result[prop].id + "/messages/" + document.getElementById("inputServer").value ;
                 xxhr.open("DELETE", url, true);
                 xxhr.setRequestHeader("authorization", document.getElementById("inputToken").value);
                 xxhr.send(null);
