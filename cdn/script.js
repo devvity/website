@@ -1,6 +1,0 @@
-<script>
-    
-</script>
-
-
-// devity.xyz
