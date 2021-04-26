@@ -39,11 +39,12 @@ body {
 .lol {
     font-family: 'Roboto';
     color: white;
-    text-align: center;
-    font-size: 70px;
+    text-align:initial;
+    font-size: 40px;
     font-weight: 100;
+    margin-left: 30px;
     margin-top: 20px;
-    margin-bottom: -70px;
+    margin-bottom: -35px;
     animation: shake 15s ease infinite;
 
     
@@ -51,18 +52,31 @@ body {
 .lol2 {
     font-family: 'Roboto';
     color: white;
-    text-align: center;
+    text-align:initial;
     font-weight: 600;
-    font-size: 55px;
-    margin-bottom: -50px;
+    font-size: 25px;
+    margin-left: 30px;
+    margin-bottom: -20px;
     animation: shake 15s ease infinite;
+}
+
+.lol3 {
+  font-family: 'Roboto';
+  color: white;
+  text-align:initial;
+  position:absolute;
+  font-weight: 100;
+  top: 9%;
+  font-size: 25px;
+  left: 15%;
+  margin-top: -50px;
 }
 
 .bar {
   display:block;
   position:absolute;
-  top:20%;
-  left:50%;
+  top:7%;
+  left:15%;
   border-bottom:1px solid white;
   width:0%;
   text-align:center;
@@ -72,27 +86,28 @@ body {
 @keyframes line {
 
   0% {
-    left:50%;
+    left:16.5%;
     width:0%;
   }
   
   25%{
-    left:32.5%;
-    width:35%;
+    left:14%;
+    width:5.5%;
   }
 
   50%{
-    left:50%;
+    left:16.5%;
     width:0%;
   }
 
   75%{
-    left:32.5%;
-    width:35%;
+    left:14%;
+    width:5.5%;
   }
 
   100%{
-    left:50%;
+    left:16.5%;
     width:0%;
   }
 }
+
